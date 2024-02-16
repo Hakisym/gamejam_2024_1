@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 376943393}
   - component: {fileID: 376943392}
   - component: {fileID: 376943395}
+  - component: {fileID: 376943396}
   m_Layer: 0
   m_Name: Open Sprite Shape
   m_TagString: Untagged
@@ -385,7 +386,7 @@ EdgeCollider2D:
   m_GameObject: {fileID: 376943391}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 49f1179e6d4ce1b4ab6c84fda45acb08, type: 2}
+  m_Material: {fileID: 6200000, guid: f1cd1dff94b503341a6f0186d8c26451, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -423,6 +424,18 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &376943396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376943391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36e7680d78ae7e44b9b5f75837c1f169, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,9 +532,10 @@ GameObject:
   - component: {fileID: 899057250}
   - component: {fileID: 899057249}
   - component: {fileID: 899057248}
+  - component: {fileID: 899057252}
   m_Layer: 0
   m_Name: Puck
-  m_TagString: Untagged
+  m_TagString: Hitable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -539,14 +553,14 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 6200000, guid: b3511bd29ad77d1459665f145675113c, type: 2}
-  m_Interpolate: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!58 &899057249
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -624,12 +638,25 @@ Transform:
   m_GameObject: {fileID: 899057247}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.41, y: 0.02, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &899057252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899057247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a164add68411d8544ace042cbd4e9b80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1881821538
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,7 +685,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1881821538}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6457e65a8a5266247a3434c2543300d6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -726,7 +753,7 @@ Transform:
   m_GameObject: {fileID: 1881821538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.7219489, y: -0.3980182, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -744,6 +771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68f37f210b40b274a9319a356e5b0afd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  force: 10
 --- !u!1 &1977951613
 GameObject:
   m_ObjectHideFlags: 0
